@@ -1,4 +1,4 @@
-# electronics_store_vue_js
+# Electronic shop VUE JS
 
 ## Project setup
 ```
