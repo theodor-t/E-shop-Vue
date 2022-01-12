@@ -70,7 +70,7 @@
                 else {
                     this.toggledDiscount = true;
                 }
-                await this.deleteDiscount(this.DISCOUNT.id); // -> to remove on popup not now.
+                await this.deleteDiscount(this.DISCOUNT.code); // -> to remove on popup not now.
             },
             DELETE(url) {
                 try {

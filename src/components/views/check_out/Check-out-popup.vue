@@ -103,7 +103,7 @@
                     const userInfo = {
                         "name": this.name,
                         "surname": this.surname,
-                        "address": this.name.address,
+                        "address": this.address,
                         "phone": this.phone,
                         "city": this.city,
                         "country": this.country
