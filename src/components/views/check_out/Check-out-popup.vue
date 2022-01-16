@@ -127,21 +127,22 @@
                     "paymentMethod": this.paymentMethod
                 };
 
-                if (this.DISCOUNT) await this.deleteDiscount(this.DISCOUNT.id);
+                console.log(this.DISCOUNT);
+                if (this.DISCOUNT.used === false) await this.deactivateDiscount(this.DISCOUNT.id);
                 await this.sendOrderToAPI(order);
                 this.CLEAR_STORE();
             },
-            deleteDiscount(id) {
+          deactivateDiscount(id) {
                 return new Promise((resolve => {
-                    this.DELETE(`http://localhost:8080/discount/${id}`)
+                    this.DEACTIVATE(`http://localhost:8080/deactivate/${id}`)
                         .then(response => {
                             resolve(response.data)
                         }).catch();
                 }))
             },
-            DELETE(url) {
+            DEACTIVATE(url) {
                 try {
-                    return axios.delete(url)
+                    return axios.get(url)
                 } catch (e) {
                     return e;
                 }
