@@ -127,26 +127,32 @@
                     "paymentMethod": this.paymentMethod
                 };
 
-                console.log(this.DISCOUNT);
-                if (this.DISCOUNT.used === false) await this.deactivateDiscount(this.DISCOUNT.id);
+                if (this.DISCOUNT && this.DISCOUNT.activated === false) await this.deactivateDiscount(this.DISCOUNT.code);
                 await this.sendOrderToAPI(order);
                 this.CLEAR_STORE();
             },
-          deactivateDiscount(id) {
+          deactivateDiscount(code) {
                 return new Promise((resolve => {
-                    this.DEACTIVATE(`http://localhost:8080/deactivate/${id}`)
+                    this.GET(`http://localhost:8080/deactivate/${code}`)
                         .then(response => {
                             resolve(response.data)
                         }).catch();
                 }))
             },
-            DEACTIVATE(url) {
+            DELETE(url) {
                 try {
                     return axios.get(url)
                 } catch (e) {
                     return e;
                 }
             },
+          GET(url){
+            try {
+              return axios.get(url)
+            }  catch (e){
+              return e;
+            }
+          },
             POST(url, data) {
                 try {
                     return axios.post(url, data);

@@ -61,7 +61,7 @@
                 this.SET_SHIPPING(shippingObject);
             },
             async setDiscount() {
-                if (this.discountCode.length !== 12) return;
+                if (this.discountCode.length === 12) return;
 
                 await this.GET_DISCOUNT(this.discountCode);
                 this.discountCode = (this.DISCOUNT ? this.DISCOUNT.value : 0);

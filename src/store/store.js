@@ -56,8 +56,10 @@ const store = new Vuex.Store({
             localStorage.setItem('shipping', JSON.stringify(state.shipping));
         },
         SET_DISCOUNT: (state, discount) => {
-            state.discount = discount;
-            localStorage.setItem('discount', JSON.stringify(state.discount));
+            if(discount.activated === false){
+                state.discount = discount;
+                localStorage.setItem('discount', JSON.stringify(state.discount));
+            }
         },
         CLEAR_STORE: (state) => {
             localStorage.clear();
