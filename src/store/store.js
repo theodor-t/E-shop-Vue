@@ -146,6 +146,7 @@ const store = new Vuex.Store({
             return state.categories
         },
         CART(state) {
+            console.log(state.cart);
             return state.cart
         },
         CART_COUNT(state) {
