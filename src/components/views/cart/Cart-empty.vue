@@ -16,7 +16,7 @@
 
 <style scoped>
     * {
-        color: #fff;
+        color: #000000;
     }
 
     a {
