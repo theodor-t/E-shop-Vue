@@ -29,10 +29,12 @@
 
 <style scoped>
     section {
-        width: 80%;
-        margin: 20% auto auto;
+        width: 90%;
+        /*margin: 10% auto auto;*/
     }
-
+  .cart__review{
+    margin-top: 100px;
+  }
     #cart__products {
         margin-top: 5%;
         display: grid;
@@ -46,12 +48,12 @@
 
     h3 {
         font-size: 26px;
-        color: #fff;
+        color: #000000;
         font-weight: 900;
     }
 
     p {
-        color: #fff;
+        color: #000000;
         font-weight: 200;
         font-size: 1.2em;
     }

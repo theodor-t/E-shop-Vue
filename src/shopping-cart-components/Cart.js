@@ -8,15 +8,15 @@ export default class Cart {
     stockCount(products, id, color, size) {
         const countArray = [];
         const element = products.find(product => product.id === Number(id));
-
-        if (element.colors)
+        console.log(element);
+        if (element.colors.length > 0)
             countArray.push(element.colors.find(product => product.color === color).quantity);
 
-        if (element.memoryCapacity)
+        if (element.memoryCapacity.length > 0)
             countArray.push(element.memoryCapacity.find(product => product.size === size).quantity);
 
-        if (element.memoryCapacity === null && element.colors === null) return element.quantity;
-
+        if (element.memoryCapacity.length === 0  && element.colors.length === 0) return element.quantity;
+        console.log("pula lu vitalik ii mititica");
         return Math.min(...countArray.filter(elem => elem !== null));
     }
 

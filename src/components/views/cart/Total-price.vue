@@ -20,8 +20,8 @@
         <div class="check__out__total">
             <div @click="toggledDiscount = !toggledDiscount">
                 <em :class="[DISCOUNT ? 'disabled' : '']" class="fas fa-info-circle" id="show__discount"
-                    title="Having a discount nigga?"></em>
-                <span>${{totalPrice}}</span>
+                    title="Having a discount?"></em>
+                <span>${{totalPrice.toFixed(2)}}</span>
             </div>
 
             <div :class="[toggledDiscount ? '' : 'disabled', DISCOUNT ? 'disabled' : '' ]" class="input__container">
@@ -105,6 +105,7 @@
 </script>
 
 <style scoped>
+
     .check__out__container a {
         text-decoration: none;
         color: #000;
@@ -133,7 +134,7 @@
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-row-gap: 10px;
         list-style: none;
-        color: #fff;
+        color: #000000;
     }
 
     .disabled {
@@ -161,7 +162,7 @@
     .total__price__container span {
         font-size: 1.5em;
         letter-spacing: 2px;
-        color: #fff;
+        color: #000000;
         font-weight: bold;
     }
 
@@ -186,9 +187,11 @@
     }
 
     svg {
-        filter: invert(1);
+        filter: invert(0);
         margin-right: 15px;
         font-size: 20px;
+
+
     }
 
     .total__price__container em:hover {

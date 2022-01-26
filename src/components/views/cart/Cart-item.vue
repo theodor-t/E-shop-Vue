@@ -95,7 +95,7 @@
     }
 
     #cart__products .item__title span {
-        color: #fff;
+        color: #000000;
         display: block;
     }
 
@@ -132,7 +132,7 @@
     }
 
     h2 {
-        color: #fff;
+        color: #000000;
         letter-spacing: 2px;
         font-weight: 600;
         font-size: 1.5em;
