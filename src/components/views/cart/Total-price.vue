@@ -157,6 +157,7 @@
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-column-gap: 0;
         grid-row-gap: 20px;
+        margin-bottom: 15px;
     }
 
     .total__price__container span {
