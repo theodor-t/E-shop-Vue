@@ -126,11 +126,11 @@ export default {
 }
 
 .container .card:after {
-  content: 'ELS';
+  content: 'TOP';
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: 12em;
+  font-size: 10em;
   font-weight: 800;
   font-style: italic;
   color: rgba(255, 255, 255, 0.04);
