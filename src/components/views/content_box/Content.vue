@@ -1,157 +1,171 @@
 <template>
-    <section>
-        <div :style="{backgroundColor: styleColor}" class="circle"></div>
-        <div class="content">
-            <div class="textBox">
-                <h2>
-                    It's not just Store <br> It's <span :style="{color: styleColor}">iPhones</span>
-                </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis egestas laoreet tellus eget fermentum. Donec a ipsum id mi suscipit vulputate id quis eros.
-                    Nullam auctor nisi ut ante vehicula hendrerit. Pellentesque porttitor ac ligula quis vulputate.
-                    Nam lobortis urna a purus accumsan, id tempus lectus rutrum. Maecenas tincidunt ultrices semper.
-                    A cursus tortor odio quis sem. Nam non laoreet lacus. Mauris nisl enim, mollis nec tortor at,
-                    dictum fringilla nulla.
-                    Donec lacinia pretium varius. Nunc fringilla purus vitae libero dictum fringilla.</p>
-                <a :style="{background: styleColor}" class="buyNow" href="">Buy Now!</a>
-            </div>
-            <div class="imgBox">
-                <img alt="Could not load" class="iphone"
-                     v-bind:src="require('../../../static/img/iphone/' + currentImage)">
-            </div>
+  <section>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+               checked="checked">
+        <div class="carousel-item">
+          <img class="slider-img" alt="Could not load"
+               v-bind:src="require('../../../static/img/slider1.png')">
         </div>
-    </section>
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+          <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript">
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+          <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel">
+        </div>
+        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+        <label for="carousel-2" class="carousel-control next control-1">›</label>
+        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+        <label for="carousel-3" class="carousel-control next control-2">›</label>
+        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+        <label for="carousel-1" class="carousel-control next control-3">›</label>
+        <ol class="carousel-indicators">
+          <li>
+            <label for="carousel-1" class="carousel-bullet">•</label>
+          </li>
+          <li>
+            <label for="carousel-2" class="carousel-bullet">•</label>
+          </li>
+          <li>
+            <label for="carousel-3" class="carousel-bullet">•</label>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
 </template>
 
 <script>
-    export default {
-        name: "ContentBox",
-        data: () => ({
-            currentImage: 'iph11_gold.png',
-            styleColor: '#e8b923',
-            imageSource: {
-                "#e8b923": 'iph11_gold.png', // gold color
-                "gray": 'iph11_gray.png',
-                "purple": 'iph12_purple.png'
-            }
-        }),
-        props: {
-            color: null
-        },
-        watch: {
-            color() {
-                this.styleColor = this.color;
-                this.currentImage = this.imageSource[this.color];
-            }
-        }
-    }
+export default {
+  name: "ContentBox",
+  data: () => ({
+
+  }),
+  props: {
+
+  },
+  watch: {
+  }
+}
 </script>
 
 <style scoped>
-    section {
-        padding: 40px;
-    }
 
-    .content {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.carousel {
+  position: absolute;
 
-    .content .textBox {
-        position: relative;
-        max-width: 600px;
-    }
+}
 
-    .content .textBox h2 {
-        color: #fff;
-        font-size: 4em;
-        line-height: 1.4em;
-        font-weight: 500;
-    }
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 
-    .content .textBox h2 span {
-        color: #fedfc6;
-        font-size: 1.2em;
-        font-weight: 900;
-    }
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
 
-    .content .textBox p {
-        color: #fff;
-    }
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
 
-    .content .textBox a {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 8px 20px;
-        background: #fedfc6;
-        color: #fff;
-        border-radius: 40px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-decoration: none;
-    }
+.carousel-item img {
+  display: block;
+  width: 100%;
+}
 
-    .circle {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #fedfc6;
-        clip-path: circle(600px at right 800px);
-    }
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
 
-    .content .imgBox {
-        width: 600px;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 50px;
-        margin-top: 50px;
-    }
+.carousel-control.prev {
+  left: 2%;
+}
 
-    .content .imgBox img {
-        max-width: 440px;
-    }
+.carousel-control.next {
+  right: 2%;
+}
 
-    @media (max-width: 991px) {
-        section {
-            padding: 20px 20px 120px;
-        }
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
 
-        .content {
-            flex-direction: column;
-            margin-top: 100px;
-        }
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
 
-        .content .textBox h2 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
 
-        .content .textBox {
-            max-width: 100%;
-        }
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
 
-        section .circle {
-            clip-path: circle(400px at center bottom);
-        }
+.carousel-bullet {
+  color: #ababab;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
 
-        .content .imgBox {
-            max-width: 100%;
-            justify-content: center;
-        }
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
 
-        .content .imgBox img {
-            max-width: 300px;
-        }
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
 
-        .thumb li img {
-            max-width: 40px;
-        }
-
-    }
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
 </style>

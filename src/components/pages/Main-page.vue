@@ -2,14 +2,12 @@
     <section>
         <Header/>
         <ContentBox :color="styleColor"/>
-        <Thumb @messageFromChild="receiveMessage"/>
     </section>
 </template>
 
 <script>
     import Header from "@/components/views/header/Header";
     import ContentBox from "@/components/views/content_box/Content";
-    import Thumb from "@/components/views/thumbs/Thumb";
 
     export default {
         name: "MainPage",
@@ -22,7 +20,7 @@
             }
         },
         components: {
-            Header, ContentBox, Thumb
+            Header, ContentBox
         }
     }
 </script>
@@ -37,7 +35,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #131313;
+        background: #ffffff;
     }
 
 </style>

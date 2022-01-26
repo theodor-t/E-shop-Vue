@@ -71,7 +71,6 @@
     header .logo {
         width: 100%;
         position: relative;
-        max-width: 35px;
     }
 
     header ul {
@@ -86,7 +85,7 @@
 
     header ul li a {
         display: inline-block;
-        color: #fff;
+        color: #000000;
         font-weight: 400;
         margin-left: 40px;
         text-decoration: none;
@@ -98,7 +97,7 @@
         }
 
         header .logo {
-            max-width: 60px;
+            width: 200px;
         }
 
         header ul {
@@ -116,7 +115,7 @@
             justify-self: center;
             align-items: center;
             flex-direction: column;
-            background: #131313;
+            background: #ffffff;
             z-index: 1;
         }
 
