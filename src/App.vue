@@ -24,6 +24,6 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: #131313;
+        background: #ffffff;
     }
 </style>

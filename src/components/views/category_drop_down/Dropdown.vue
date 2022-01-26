@@ -52,12 +52,15 @@
         align-items: center;
         z-index: auto;
         color: #fff;
+
+
     }
 
     .select-box {
         display: flex;
         width: 200px;
         flex-direction: column;
+        margin-left: 100px;
     }
 
     .select-box #options-container {
@@ -133,6 +136,23 @@
 
     .select-box .option .radio {
         display: none;
+    }
+    @media (max-width: 1180px) {
+      .select-box {
+        margin-left: 100px;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .select-box {
+        margin-left: 330px;
+      }
+    }
+
+    @media (max-width: 670px) {
+      .select-box {
+        margin-left: 185px;
+      }
     }
 
 </style>
