@@ -10,11 +10,13 @@
         </div>
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
-          <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript">
+          <img class="slider-img" alt="Could not load"
+               v-bind:src="require('../../../static/img/slider2.png')">
         </div>
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
-          <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel">
+          <img class="slider-img" alt="Could not load"
+               v-bind:src="require('../../../static/img/slider3.png')">
         </div>
         <label for="carousel-3" class="carousel-control prev control-1">‹</label>
         <label for="carousel-2" class="carousel-control next control-1">›</label>
