@@ -7,7 +7,7 @@
 
 <script>
 import Header from "@/components/views/header/Header";
-import NewsCard from "../views/news/news-card";
+import NewsCard from "../views/news/News-card";
 export default {
   name: "NewsPage",
   components:{
