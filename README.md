@@ -1,4 +1,4 @@
-# Electronic shop VUE JS
+# ANTIHYPE | ONLINE SHOP
 
 ## Project setup
 ```
