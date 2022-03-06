@@ -2,7 +2,7 @@
     <div class="total__price__container">
         <CheckOutPopUp @close="showPopup = false" v-if="showPopup"/>
         <div class="subtotal"><span>Subtotal</span></div>
-        <div class="total__price"><span>$ {{subTotalPrice}}</span></div>
+        <div class="total__price"><span>{{subTotalPrice}} lei</span></div>
         <div class="shipping">
             <div @click="toggledShipping = !toggledShipping" id="toggle__shipping__container">
                 <em class="fas fa-info-circle" id="show__shipping"></em>
@@ -15,13 +15,13 @@
                 <li @click="setShipping(14.99, $event)">DHL (1 working day)</li>
             </ul>
         </div>
-        <div class="shipping__price"><span>$ {{SHIPPING_PRICE}}</span></div>
+        <div class="shipping__price"><span>{{SHIPPING_PRICE}} lei</span></div>
         <div class="total"><span>Total</span></div>
         <div class="check__out__total">
             <div @click="toggledDiscount = !toggledDiscount">
                 <em :class="[DISCOUNT ? 'disabled' : '']" class="fas fa-info-circle" id="show__discount"
                     title="Having a discount?"></em>
-                <span>${{totalPrice.toFixed(2)}}</span>
+                <span>{{totalPrice.toFixed(2)}} lei</span>
             </div>
 
             <div :class="[toggledDiscount ? '' : 'disabled', DISCOUNT ? 'disabled' : '' ]" class="input__container">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div @click="showPopup = true" class="check__out__container"><a>Check Out</a></div>
+        <div @click="showPopup = true" class="check__out__container"><a class="text_color">Check Out</a></div>
     </div>
 </template>
 
@@ -111,12 +111,13 @@
         color: #000;
         border-radius: 12px;
         margin-top: 20px;
-        background-color: yellow;
+        background-color: #005b8f;
         border: none;
         padding: 15px 32px;
         text-align: center;
         display: inline-block;
         font-size: 16px;
+        color: white;
     }
 
     .total__price__container em:hover {
@@ -136,7 +137,9 @@
         list-style: none;
         color: #000000;
     }
-
+    #discount__holder{
+      color: black;
+    }
     .disabled {
         display: none;
     }
@@ -207,6 +210,7 @@
         letter-spacing: 3px;
         grid-area: 4 / 2 / 5 / 3;
         cursor: pointer;
+
     }
 
     @-webkit-keyframes gradient {

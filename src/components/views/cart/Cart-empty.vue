@@ -21,10 +21,10 @@
 
     a {
         text-decoration: none;
-        color: #000;
+        color: #ffffff;
         border-radius: 12px;
         margin-top: 20px;
-        background-color: yellow;
+        background-color: #005b8f;
         border: none;
         padding: 15px 32px;
         text-align: center;

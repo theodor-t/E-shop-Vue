@@ -21,7 +21,7 @@
                 @click="selectColor(index, color.color)"
                 v-for="(color, index) in product_data.colors"/>
         </div>
-        <a @click="addToCart"> {{ product_data.price }} $</a>
+          <div class="button_slide slide_left" @click="addToCart"> <em class="fas fa-cart-plus"></em> {{ product_data.price }} lei</div>
       </div>
     </div>
   </li>
@@ -91,9 +91,9 @@ export default {
 .container {
   position: relative;
 }
-
 .highlight {
-  background: #9bdc28 !important;
+  background: #005b8f !important;
+
 }
 
 .selectedColor {
@@ -102,10 +102,11 @@ export default {
 
 .container .card {
   position: relative;
-  width: 255px;
+  width: 275px;
   height: 450px;
   background: #232323;
-  border-radius: 20px;
+/*  border-radius: 20px;*/
+  margin-bottom: 35px;
   overflow: hidden;
 }
 
@@ -116,7 +117,6 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: wheat;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
@@ -126,7 +126,6 @@ export default {
 }
 
 .container .card:after {
-  content: 'TOP';
   position: absolute;
   top: 30%;
   left: -20%;
@@ -228,12 +227,14 @@ export default {
 }
 
 .container .card .contentBx .size span:hover {
-  background: #9bdc28;
+  background: #005b8f;
   z-index: 1;
+  color: white;
 }
 
 .container.disabled .card {
-  border: 3px solid yellow;
+  border: 3px solid #005b8f;
+  color: white;
 }
 
 .container.disabled:hover {
@@ -283,4 +284,24 @@ export default {
   transition-delay: 0.75s;
   z-index: 100;
 }
+.button_slide {
+  color: #FFF;
+  border: 2px solid rgb(0, 91, 143);
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #005b8f;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.slide_left:hover {
+  box-shadow: inset 0 0 0 50px #005b8f;
+}
+
 </style>

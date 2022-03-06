@@ -20,11 +20,11 @@
             </div>
             <div class="item__price">
                 <h2>
-                    ${{item_data.price}}
+                    {{item_data.price}} lei
                 </h2>
             </div>
             <div class="item__configure">
-                <a @click="removeItem" class="remove__btn"><em class="far fa-times-circle"></em></a>
+                <a @click="removeItem" class="remove__btn"><em class="fas fa-trash"></em></a>
             </div>
         </div>
         <hr>
@@ -93,6 +93,15 @@
     .item__quantity a {
         padding: 10px 10px !important;
     }
+    .increment__btn{
+      color: white;
+    }
+    .decrement__btn{
+      color: white;
+    }
+    .remove__btn{
+      color: white;
+    }
 
     #cart__products .item__title span {
         color: #000000;
@@ -143,7 +152,7 @@
         color: #000;
         border-radius: 12px;
         margin-top: 20px;
-        background-color: yellow;
+        background-color: #005b8f;
         border: none;
         padding: 15px 32px;
         text-align: center;

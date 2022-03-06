@@ -214,7 +214,9 @@ export default {
   border-radius: 4px;
   resize: vertical;
 }
-
+#check__out__close{
+  cursor: pointer;
+}
 .input_width {
   width: 90%;
   padding: 18px;
@@ -256,9 +258,8 @@ export default {
 .check__out__window {
   width: 80%;
   background-color: whitesmoke;
-  opacity: 0.96;
   border-radius: 30px;
-  position: absolute;
+  position: fixed;
   padding: 30px 30px;
   left: 0;
   right: 0;
