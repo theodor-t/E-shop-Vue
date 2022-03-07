@@ -6,17 +6,17 @@
                checked="checked">
         <div class="carousel-item">
           <img class="slider-img" alt="Could not load"
-               v-bind:src="require('../../../static/img/slider1.png')">
+               v-bind:src="require('../../../static/img/slider1.jpg')">
         </div>
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
           <img class="slider-img" alt="Could not load"
-               v-bind:src="require('../../../static/img/slider2.png')">
+               v-bind:src="require('../../../static/img/slider2.jpg')">
         </div>
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
           <img class="slider-img" alt="Could not load"
-               v-bind:src="require('../../../static/img/slider3.png')">
+               v-bind:src="require('../../../static/img/slider3.jpg')">
         </div>
         <label for="carousel-3" class="carousel-control prev control-1">‹</label>
         <label for="carousel-2" class="carousel-control next control-1">›</label>
