@@ -12,29 +12,21 @@
       </div>
       <div class="contact">
         <h3>Please, complete this form</h3>
-        <form>
+        <form ref="form" @submit.prevent="sendEmail">
           <p>
-            <label for="name" id="name">Name</label>
-            <input type="text" name="name">
+            <label>Full Name</label>
+            <input type="text" name="user_name">
           </p>
           <p>
-            <label for="surname" id="surname">Surname</label>
-            <input type="text" name="surname">
-          </p>
-          <p>
-            <label for="phone" id="phone">Phone number</label>
-            <input type="text" name="phone">
-          </p>
-          <p>
-            <label for="email" id="email">Email</label>
-            <input type="email" name="email">
+            <label>Email</label>
+            <input type="email" name="user_email">
           </p>
           <p class="full">
             <label for="message" id="message">Message</label>
             <textarea name="message" id="" rows="5"></textarea>
           </p>
           <p class="full">
-            <button>Send</button>
+            <button type="submit" value="Send">Send</button>
           </p>
         </form>
       </div>
@@ -43,12 +35,26 @@
 </template>
 
 <script>
+
+import emailjs from '@emailjs/browser';
+
 export default {
-  name: "Contact-card"
+  name: "Contact-card",
+  methods: {
+    sendEmail() {
+      emailjs.sendForm('service_rhz9a7w', 'template_gobnvmj', this.$refs.form, 'bSCooxdPK1JoDb3WY')
+          .then((result) => {
+            console.log('SUCCESS!', result.text);
+          }, (error) => {
+            console.log('FAILED...', error.text);
+          });
+    }
+  }
 }
 </script>
 
 <style scoped>
+
 .container{
   max-width: 1170px;
   margin-left: auto;
