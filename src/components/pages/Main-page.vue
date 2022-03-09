@@ -2,6 +2,7 @@
     <section>
         <Header/>
         <ContentBox :color="styleColor"/>
+
     </section>
 </template>
 

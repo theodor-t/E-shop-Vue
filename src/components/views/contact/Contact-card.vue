@@ -1,16 +1,44 @@
 <template>
-  <div class="card">
-    <div class="banner">
-      <div class="avatar"></div>
+  <div class="container">
+    <h1 class="brand">Contact Us</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>Contacts</h3>
+        <ul>
+          <li>Balti, Bulgara 80/2</li>
+          <li>(+373) 60-950-924</li>
+          <li>official.antihype@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Please, complete this form</h3>
+        <form>
+          <p>
+            <label for="name" id="name">Name</label>
+            <input type="text" name="name">
+          </p>
+          <p>
+            <label for="surname" id="surname">Surname</label>
+            <input type="text" name="surname">
+          </p>
+          <p>
+            <label for="phone" id="phone">Phone number</label>
+            <input type="text" name="phone">
+          </p>
+          <p>
+            <label for="email" id="email">Email</label>
+            <input type="email" name="email">
+          </p>
+          <p class="full">
+            <label for="message" id="message">Message</label>
+            <textarea name="message" id="" rows="5"></textarea>
+          </p>
+          <p class="full">
+            <button>Send</button>
+          </p>
+        </form>
+      </div>
     </div>
-    <h3>Țurcanu Tudor</h3>
-    <a href="mailto:contact@webdevtrick.com">📧 turcanutudor@yandex.ru</a>
-    <a href="">📱 +373 609 50 924</a>
-    <ul>
-      <a href="#" target="_blank"><em class="fab fa-facebook-f fa-lg"></em></a>
-      <a href="#" target="_blank"><em class="fab fa-vk fa-lg"></em></a>
-      <a href="#" target="_blank"><em class="fab fa-instagram fa-lg"></em></a>
-    </ul>
   </div>
 </template>
 
@@ -21,82 +49,95 @@ export default {
 </script>
 
 <style scoped>
-.card{
-  width: 350px;
-  overflow: hidden;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+.container{
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  padding: 1em;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+.brand{
   text-align: center;
-  -webkit-transition: .1s ease-in-out;
-  transition: .1s ease-in-out;
 }
-.card:first-of-type{
-  margin-right: 25px;
+.brand span{
+  color: #fff;
 }
 
-.card:hover{
-  margin-top: -10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
 }
-.banner{
-  height: 260px;
-  width: 100%;
-  padding-top: 30px;
-  background-color: #FAFAFA;
-  background-size: cover;
-  background-position: center;
+.wrapper > *{
+  padding: 1em;
 }
-.card .banner{
-  background-image: url("https://i.imgur.com/KYrc8Yy.png");
-}
-.avatar{
-  height: 120px;
-  width: 120px;
-  margin: auto;
-  background-size: cover;
-  background-position: center;
-  background-color: #F1F1F1;
-  border-radius: 100%;
-}
-.card .avatar{
-  background-image: url("https://sun9-36.userapi.com/impg/tqAiCJuZI7qBe59e6M9gTaKGf-KoDvv6Db__5g/8z8ku5VNaeQ.jpg?size=845x1080&quality=96&sign=3a37751a715293c4b83981632a8d710d&type=album");
+.company-info{
+  background: #c9e6ff;
 }
 
-h3, a, i{
-  font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
-  -webkit-transition: .1s ease-in-out;
-  transition: .1s ease-in-out;
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin: 0 0 1rem 0;
 }
-h3{
-  margin-top: 45px;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #212121;
+.contact{
+  background: #f9feff;
 }
-a {
+
+/*Form styles*/
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label{
   display: block;
-  padding: 5px 0px;
-  font-size: 14px;
-  color: #9E9E9E;
-  text-decoration: none;
 }
-a:hover{
-  background-color: #FAFAFA;
-  color: inherit;
+
+.contact form p{
+  margin: 0;
 }
-ul {
-  margin-top: 10px;
-  padding: 15px 0px;
-  background-color: #FAFAFA;
+
+.contact form .full{
+  grid-column: 1 / 3 ;
 }
-ul a{
-  display: inline;
-  margin-right: 10px;
+
+.contact form button , .contact form input, .contact form textarea{
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #c9e6ff;
 }
-ul a i:hover{
-  transform: scale(1.5);
-  color: #2ab1ce;
+.contact form button{
+  background: #c9e6ff;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact form button:hover, .contact form button:focus{
+  background: #92bde7;
+  color: #fff;
+  outline: 0;
+  transition: background-color 1s ease-out ;
+}
+
+/*Pantallas Grandes*/
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding: 2em;
+  }
+
+  .company-info h3, .company-info ul{
+    text-align: left;
+  }
 }
 </style>
