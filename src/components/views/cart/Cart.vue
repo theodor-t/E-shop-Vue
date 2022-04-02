@@ -11,6 +11,7 @@
                 :key="item.id"
                 v-for="item in this.CART"/>
     </ul>
+
 </section>
 </template>
 
