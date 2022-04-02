@@ -44,9 +44,9 @@ export default {
     sendEmail() {
       emailjs.sendForm('service_rhz9a7w', 'template_gobnvmj', this.$refs.form, 'bSCooxdPK1JoDb3WY')
           .then((result) => {
-            console.log('SUCCESS!', result.text);
+            alert('SUCCESS!', result.text);
           }, (error) => {
-            console.log('FAILED...', error.text);
+            alert('FAILED...', error.text);
           });
     }
   }
