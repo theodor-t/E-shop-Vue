@@ -31,6 +31,8 @@
         },
         async mounted() {
             await this.GET_CATEGORIES();
+            this.currentCategory = "iphone";
+            await this.GET_PRODUCTS(this.currentCategory);
         }
     }
 </script>
