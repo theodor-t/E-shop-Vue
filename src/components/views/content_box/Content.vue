@@ -1,42 +1,26 @@
 <template>
-  <section>
-    <div class="carousel">
-      <div class="carousel-inner">
-        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
-               checked="checked">
-        <div class="carousel-item">
-          <img class="slider-img" alt="Could not load"
-               v-bind:src="require('../../../static/img/slider1.jpg')">
+  <section class="wrapper">
+    <div class="box header">
+      <header class="header__top">
+        <ul class="social_site">
+          <li class="social_link"><a href="https://vk.com/erlax_official" target="_blank"><i class="fab fa-vk fa-2x link__vk"></i></a></li>
+          <li class="social_link"><a href="https://www.facebook.com/erlax.official" target="_blank"><i class="fab fa-instagram fa-2x link__inst"></i></a></li>
+          <li class="social_link"><a href="https://instagram.com/theodor_t19" target="_blank"><i class="fab fa-facebook-f fa-2x link__fb"></i></a></li>
+          <li class="social_link"><a href="https://github.com/theodorerlax" target="_blank"><i class="fab fa-telegram-plane fa-2x link__git"></i></a></li>
+        </ul>
+        <div class="ScrollDown">
+
+          <div class="ScrollDown_box">
+            <a class="btn_ScrollDown" href="#welcome" v-smooth-scroll>
+              <span></span><span></span><span></span>Scroll Down</a>
+          </div>
+
         </div>
-        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-          <img class="slider-img" alt="Could not load"
-               v-bind:src="require('../../../static/img/slider2.jpg')">
-        </div>
-        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-        <div class="carousel-item">
-          <img class="slider-img" alt="Could not load"
-               v-bind:src="require('../../../static/img/slider3.jpg')">
-        </div>
-        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-        <label for="carousel-2" class="carousel-control next control-1">›</label>
-        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-        <label for="carousel-3" class="carousel-control next control-2">›</label>
-        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-        <label for="carousel-1" class="carousel-control next control-3">›</label>
-        <ol class="carousel-indicators">
-          <li>
-            <label for="carousel-1" class="carousel-bullet">•</label>
-          </li>
-          <li>
-            <label for="carousel-2" class="carousel-bullet">•</label>
-          </li>
-          <li>
-            <label for="carousel-3" class="carousel-bullet">•</label>
-          </li>
-        </ol>
-      </div>
+      </header>
     </div>
+    <section id="welcome">
+      <h1>Welcome section</h1>
+      </section>
   </section>
 
 </template>
@@ -46,128 +30,197 @@ export default {
   name: "ContentBox",
   data: () => ({
 
+
   }),
   props: {
 
+
   },
   watch: {
+
+  },
+  mounted() {
+
   }
 }
 </script>
 
 <style scoped>
 
-.carousel {
-  position: absolute;
-
+body{
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header  header  header" "content content content" "footer  footer  footer";
+  background-color: #fff;
+  color: #444;
 }
 
-.carousel-inner {
-  position: relative;
+.box {
+  font-size: 150%;
+}
+.header {
+  grid-area: header;
+}
+.header__top {
   overflow: hidden;
+  position: relative;
+  height: 100vh;
   width: 100%;
+  background-color: cadetblue;
+  background-image: url("../../../static/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.social_site {
+  list-style-type: none;
+  margin-top: 12%;
+  margin-left: 2%;
+}
+@media (max-width: 768px) {
+  .social_site {
+    display: none;
+  }
+  .header__top{
+    background-image: url("../../../static/img/bg_mob.jpg");
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .social_site {
+    display: none;
+  }
+}
+.social_link:hover {
+  transform: scale(1.2);
+  /* Увеличиваем масштаб */
 }
 
-.carousel-open:checked + .carousel-item {
-  position: static;
-  opacity: 100;
+.social_link {
+  background-color: #e4e4e5;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  margin-top: 10px;
+  transition: 0.4s;
 }
 
-.carousel-item {
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: opacity 0.6s ease-out;
-  transition: opacity 0.6s ease-out;
+.social_site a {
+  text-decoration: none;
 }
 
-.carousel-item img {
-  display: block;
+.link__vk {
+  margin-left: 5px;
+  margin-top: 13px;
+  color: rgb(14, 88, 184);
+}
+
+.link__inst {
+  margin-left: 14px;
+  margin-top: 12px;
+  color: rgb(14, 88, 184);
+}
+
+.link__fb {
+  margin-left: 19px;
+  margin-top: 12px;
+  color: rgb(14, 88, 184);
+}
+
+.link__git {
+  margin-left: 12px;
+  margin-top: 11px;
+  color: rgb(14, 88, 184);
+}
+.social_site a {
+  text-decoration: none;
+}
+
+.ScrollDown {
   width: 100%;
-}
-
-.carousel-control {
-  background: rgba(0, 0, 0, 0.28);
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
-  display: none;
-  font-size: 40px;
-  height: 40px;
-  line-height: 35px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  cursor: pointer;
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  height: 100vh;
   text-align: center;
-  width: 40px;
-  z-index: 10;
 }
 
-.carousel-control.prev {
-  left: 2%;
+.ScrollDown_box {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  margin-left: -50px;
+  top: 81%;
 }
 
-.carousel-control.next {
-  right: 2%;
-}
-
-.carousel-control:hover {
-  background: rgba(0, 0, 0, 0.8);
-  color: #aaaaaa;
-}
-
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
+a.btn_ScrollDown {
   display: block;
+  padding-top: 84px;
+  width: 100px;
+  height: 10px;
+  margin: 0 auto;
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
 }
 
-.carousel-indicators {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+a.btn_ScrollDown span {
   position: absolute;
-  bottom: 2%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 10;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border-left: 4px solid #000000;
+  border-bottom: 4px solid #000000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
 }
 
-.carousel-indicators li {
-  display: inline-block;
-  margin: 0 5px;
+a.btn_ScrollDown span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-.carousel-bullet {
-  color: #ababab;
-  cursor: pointer;
-  display: block;
-  font-size: 35px;
+a.btn_ScrollDown span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
 }
 
-.carousel-bullet:hover {
-  color: #aaaaaa;
+a.btn_ScrollDown span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
 }
 
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-  color: #428bca;
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-#title {
-  width: 100%;
-  position: absolute;
-  padding: 0px;
-  margin: 0px auto;
-  text-align: center;
-  font-size: 27px;
-  color: rgba(255, 255, 255, 1);
-  font-family: 'Open Sans', sans-serif;
-  z-index: 9999;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
+
+
 </style>

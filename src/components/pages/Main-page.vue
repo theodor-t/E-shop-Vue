@@ -8,6 +8,9 @@
 <script>
     import Header from "@/components/views/header/Header";
     import ContentBox from "@/components/views/content_box/Content";
+    import vueSmoothScroll from 'vue2-smooth-scroll'
+    import Vue from "vue";
+    Vue.use(vueSmoothScroll)
 
     export default {
         name: "MainPage",
