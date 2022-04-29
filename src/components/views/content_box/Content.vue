@@ -19,13 +19,14 @@
       </header>
     </div>
     <section id="welcome">
-      <h1>Welcome section</h1>
+      <About/>
       </section>
   </section>
 
 </template>
 
 <script>
+import About from "@/components/views/about/About";
 export default {
   name: "ContentBox",
   data: () => ({
@@ -35,6 +36,9 @@ export default {
   props: {
 
 
+  },
+  components: {
+    About
   },
   watch: {
 
@@ -46,15 +50,10 @@ export default {
 </script>
 
 <style scoped>
-
-body{
-  overflow-x:hidden;
-  scroll-behavior: smooth;
-}
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header  header  header" "content content content" "footer  footer  footer";
+  grid-template-columns: 1fr ;
+  grid-template-areas: "header  header  header";
   background-color: #fff;
   color: #444;
 }
