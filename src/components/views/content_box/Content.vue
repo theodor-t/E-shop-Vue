@@ -19,6 +19,7 @@
       </header>
     </div>
     <section id="welcome">
+
       <About/>
       </section>
   </section>
@@ -78,6 +79,7 @@ export default {
   list-style-type: none;
   margin-top: 12%;
   margin-left: 2%;
+  display: none;
 }
 @media (max-width: 768px) {
   .social_site {

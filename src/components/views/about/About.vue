@@ -1,41 +1,61 @@
 <template>
-  <div class="container">
-    <div class="card">
-      <div class="circle">
-        <h2>01</h2>
+  <section>
+    <div>
+      <h1 class="heading_text">About Us</h1>
+      <p class="description">There are many variations of passages of Lorem Ipsum available, but the majority have
+        suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
+        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+        embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
+        predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of
+        over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
+        reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
+        non-characteristic words etc.</p>
+      <hr class="hr_line">
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="circle">
+          <h2>01</h2>
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente
+            autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
+          </p>
+          <a href="#">Read More...</a>
+        </div>
       </div>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
-        </p>
-        <a href="#">Read More...</a>
+
+      <div class="card">
+        <div class="circle">
+          <h2>02</h2>
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente
+            autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
+          </p>
+          <a href="#">Read More...</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <h2>03</h2>
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente
+            autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
+          </p>
+          <a href="#">Read More...</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="circle">
-        <h2>02</h2>
-      </div>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
-        </p>
-        <a href="#">Read More...</a>
-      </div>
-    </div>
+  </section>
 
-    <div class="card">
-      <div class="circle">
-        <h2>03</h2>
-      </div>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
-        </p>
-        <a href="#">Read More...</a>
-      </div>
-    </div>
-  </div>
+
 </template>
 
 <script>
@@ -45,8 +65,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 body {
   display: flex;
   align-items: center;
@@ -55,6 +73,27 @@ body {
   background: #D1D1D1;
   background-attachment: fixed;
 }
+.heading_text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  font-weight: lighter;
+}
+
+.description {
+  margin-left: 18%;
+  margin-right: 18%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.hr_line {
+  width: 35%;
+  margin: 0 auto;
+}
+
+
 
 .container {
   position: relative;
@@ -75,7 +114,7 @@ body {
   margin: 30px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   transition: all 300ms ease-in-out;
 }
 
@@ -140,7 +179,7 @@ body {
 
 .container .card:nth-child(2) .circle,
 .container .card:nth-child(2) .content a {
-  background: #ffaf00;
+  background: #49c1e1;
   color: black;
 }
 
@@ -149,10 +188,9 @@ body {
 }
 
 
-
 .container .card:nth-child(3) .circle,
 .container .card:nth-child(3) .content a {
-  background: #da2268;
+  background: #cc3366;
   color: black;
 }
 

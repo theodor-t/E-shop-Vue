@@ -40,5 +40,4 @@
         align-items: center;
         background: #ffffff;
     }
-
 </style>
