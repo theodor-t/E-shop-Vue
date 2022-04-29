@@ -3,10 +3,14 @@
     <div class="box header">
       <header class="header__top">
         <ul class="social_site">
-          <li class="social_link"><a href="https://vk.com/erlax_official" target="_blank"><i class="fab fa-vk fa-2x link__vk"></i></a></li>
-          <li class="social_link"><a href="https://www.facebook.com/erlax.official" target="_blank"><i class="fab fa-instagram fa-2x link__inst"></i></a></li>
-          <li class="social_link"><a href="https://instagram.com/theodor_t19" target="_blank"><i class="fab fa-facebook-f fa-2x link__fb"></i></a></li>
-          <li class="social_link"><a href="https://github.com/theodorerlax" target="_blank"><i class="fab fa-telegram-plane fa-2x link__git"></i></a></li>
+          <li class="social_link"><a href="https://vk.com/erlax_official" target="_blank"><i
+              class="fab fa-vk fa-2x link__vk"></i></a></li>
+          <li class="social_link"><a href="https://www.facebook.com/erlax.official" target="_blank"><i
+              class="fab fa-instagram fa-2x link__inst"></i></a></li>
+          <li class="social_link"><a href="https://instagram.com/theodor_t19" target="_blank"><i
+              class="fab fa-facebook-f fa-2x link__fb"></i></a></li>
+          <li class="social_link"><a href="https://github.com/theodorerlax" target="_blank"><i
+              class="fab fa-telegram-plane fa-2x link__git"></i></a></li>
         </ul>
         <div class="ScrollDown">
 
@@ -21,29 +25,22 @@
     <section id="welcome">
 
       <About/>
-      </section>
+    </section>
   </section>
 
 </template>
 
 <script>
 import About from "@/components/views/about/About";
+
 export default {
   name: "ContentBox",
-  data: () => ({
-
-
-  }),
-  props: {
-
-
-  },
+  data: () => ({}),
+  props: {},
   components: {
     About
   },
-  watch: {
-
-  },
+  watch: {},
   mounted() {
 
   }
@@ -53,7 +50,7 @@ export default {
 <style scoped>
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-areas: "header  header  header";
   background-color: #fff;
   color: #444;
@@ -62,9 +59,11 @@ export default {
 .box {
   font-size: 150%;
 }
+
 .header {
   grid-area: header;
 }
+
 .header__top {
   overflow: hidden;
   position: relative;
@@ -75,26 +74,31 @@ export default {
   background-size: cover;
   background-position: center;
 }
+
 .social_site {
   list-style-type: none;
   margin-top: 12%;
   margin-left: 2%;
   display: none;
 }
+
 @media (max-width: 768px) {
   .social_site {
     display: none;
   }
-  .header__top{
+
+  .header__top {
     background-image: url("../../../static/img/bg_mob.jpg");
     width: 100%;
   }
 }
+
 @media (max-width: 1200px) {
   .social_site {
     display: none;
   }
 }
+
 .social_link:hover {
   transform: scale(1.2);
   /* Увеличиваем масштаб */
@@ -136,6 +140,7 @@ export default {
   margin-top: 11px;
   color: rgb(14, 88, 184);
 }
+
 .social_site a {
   text-decoration: none;
 }
