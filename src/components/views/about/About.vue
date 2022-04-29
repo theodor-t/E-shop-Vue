@@ -2,6 +2,7 @@
   <section>
     <div>
       <h1 class="heading_text">About Us</h1>
+      <hr class="hr_line">
       <p class="description">There are many variations of passages of Lorem Ipsum available, but the majority have
         suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
         believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
@@ -10,7 +11,6 @@
         over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
         reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
         non-characteristic words etc.</p>
-      <hr class="hr_line">
     </div>
     <div class="container">
       <div class="card">
@@ -52,7 +52,40 @@
         </div>
       </div>
     </div>
-
+    <div>
+      <h1 class="heading_text">Reviews</h1>
+      <hr class="hr_line">
+    </div>
+    <div class="container">
+      <figure class="snip1574">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample40.jpg" alt="profile-sample2" />
+        <figcaption>
+          <blockquote>
+            <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+          </blockquote>
+          <h3>Sue Shei</h3>
+          <h5>Founder</h5>
+        </figcaption>
+      </figure>
+      <figure class="snip1574"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample37.jpg" alt="profile-sample7" />
+        <figcaption>
+          <blockquote>
+            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+          </blockquote>
+          <h3>Will Barrow</h3>
+          <h5>Web Designer</h5>
+        </figcaption>
+      </figure>
+      <figure class="snip1574"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample35.jpg" alt="profile-sample6" />
+        <figcaption>
+          <blockquote>
+            <p>The only skills I have the patience to learn are those that have no real application in life. </p>
+          </blockquote>
+          <h3>Indigo Violet</h3>
+          <h5>Public Relations</h5>
+        </figcaption>
+      </figure>
+    </div>
   </section>
 
 
@@ -73,6 +106,79 @@ body {
   background: #D1D1D1;
   background-attachment: fixed;
 }
+.snip1574 {
+  font-family: 'Lato', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 250px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.snip1574 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.snip1574 img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.7;
+}
+
+.snip1574 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 10% 15%;
+}
+
+.snip1574 figcaption:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 170px;
+  opacity: 0.35;
+  font-style: normal;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0px;
+  left: 50%;
+}
+
+.snip1574 blockquote {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.snip1574 h3 {
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 3px 0;
+}
+
+.snip1574 h5 {
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 1px;
+}
+
 .heading_text {
   margin-top: 20px;
   text-align: center;
@@ -82,10 +188,11 @@ body {
 }
 
 .description {
+  margin-top: 15px;
   margin-left: 18%;
   margin-right: 18%;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .hr_line {
