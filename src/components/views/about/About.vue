@@ -3,14 +3,11 @@
     <div>
       <h1 class="heading_text">About Us</h1>
       <hr class="hr_line">
-      <p class="description">There are many variations of passages of Lorem Ipsum available, but the majority have
-        suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
-        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-        embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
-        predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of
-        over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
-        reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
-        non-characteristic words etc.</p>
+      <p class="description">AntiHype - is the best spot for you to buy electronics of different brands. Starting from
+        laptops and tablest to variety of mobile phones and cases for them. It's so easy that u can find your favourite
+        product in like a few minutes. Make sure to join our community and follow us in our journey to future. We sell,
+        we pack and also we deliever it right to you - just make simple staps and it's yours. Be with us and we be there
+        for you.</p>
     </div>
     <div class="container">
       <div class="card">
@@ -19,10 +16,10 @@
         </div>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente
-            autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
+            We have already sold hundreds of devices, and it's already grows more every day! You can find all our
+            products on the link below.
           </p>
-          <a href="#">Read More...</a>
+          <a href="/products">Go to products</a>
         </div>
       </div>
 
@@ -32,10 +29,10 @@
         </div>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente
-            autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
+            Our number of visitors on site is more than 1000+ each 24 hours. Graphics don't lie! If you want to know
+            more news about us, you can follow the link below.
           </p>
-          <a href="#">Read More...</a>
+          <a href="/news">Go to news</a>
         </div>
       </div>
 
@@ -45,10 +42,10 @@
         </div>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eum ad id officia reiciendis fugiat sapiente
-            autem nobis soluta sint! Sit quidem quos exercitationem dignissimos.
+            More than 62% of our buyers are coming back to us satisfied. We are happy when you are happy! Do you want a
+            promo code? Write to us!
           </p>
-          <a href="#">Read More...</a>
+          <a href="/contact">Go to contacts</a>
         </div>
       </div>
     </div>
