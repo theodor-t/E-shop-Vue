@@ -24,7 +24,7 @@
                       </label>
                     </div>
                     <div class="surname__container">
-                      <span>Surname</span>
+                      <span>Email</span>
                       <label for="surname">
                         <input id="surname" class="input_width" pattern="[a-zA-Z]*" type="text" v-model="surname">
                       </label>
@@ -193,9 +193,9 @@ export default {
     name() {
       this.name = this.name.replace(/[^a-zA-Z]/g, '');
     },
-    surname() {
+    /*surname() {
       this.surname = this.surname.replace(/[^a-zA-Z]/g, '');
-    },
+    },*/
     city() {
       this.city = this.city.replace(/[^a-zA-Z]/g, '');
     },
@@ -259,13 +259,13 @@ export default {
 
 .check__out__window {
   width: 80%;
-  background-color: whitesmoke;
+  background-color: #ead7d7;
   border-radius: 30px;
   position: fixed;
   padding: 30px 30px;
   left: 0;
   right: 0;
-  top: 25%;
+  top: 5%;
   margin: auto;
   z-index: 100000;
 }
