@@ -12,8 +12,8 @@ import ContactCard from "@/components/views/contact/Contact-card";
 
 export default {
   name: "ContactPage",
-  components:{
-    Header,ContactCard
+  components: {
+    Header, ContactCard
   }
 }
 </script>

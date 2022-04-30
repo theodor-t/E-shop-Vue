@@ -21,7 +21,10 @@
                 @click="selectColor(index, color.color)"
                 v-for="(color, index) in product_data.colors"/>
         </div>
-          <div class="button_slide slide_left" @click="addToCart"> <em class="fas fa-cart-plus"></em> {{ product_data.price }} lei</div>
+        <div class="button_slide slide_left" @click="addToCart"><em class="fas fa-cart-plus"></em> {{
+            product_data.price
+          }} lei
+        </div>
       </div>
     </div>
   </li>
@@ -91,6 +94,7 @@ export default {
 .container {
   position: relative;
 }
+
 .highlight {
   background: #005b8f !important;
 
@@ -105,7 +109,7 @@ export default {
   width: 275px;
   height: 450px;
   background: #232323;
-/*  border-radius: 20px;*/
+  /*  border-radius: 20px;*/
   margin-bottom: 35px;
   overflow: hidden;
 }
@@ -284,6 +288,7 @@ export default {
   transition-delay: 0.75s;
   z-index: 100;
 }
+
 .button_slide {
   color: #FFF;
   border: 2px solid rgb(0, 91, 143);

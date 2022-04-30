@@ -10,9 +10,15 @@
       </section>
       <section class="text">
         <article class="main-article">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum non ad mollitia iure laudantium alias nostrum blanditiis omnis maxime numquam accusamus quo dolorem doloremque aut voluptates, dolorum. Minima, culpa.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias molestiae nesciunt consequuntur aspernatur! A sequi dolores praesentium, inventore, officiis reiciendis quasi, fugit consectetur facere, placeat ratione dignissimos omnis iure.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae, minus deleniti libero impedit modi aspernatur ex. Necessitatibus esse quia obcaecati in doloremque! Ea, laborum maiores aliquid consectetur dolorem quibusdam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum non ad mollitia iure laudantium alias
+            nostrum blanditiis omnis maxime numquam accusamus quo dolorem doloremque aut voluptates, dolorum. Minima,
+            culpa.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias molestiae nesciunt consequuntur
+            aspernatur! A sequi dolores praesentium, inventore, officiis reiciendis quasi, fugit consectetur facere,
+            placeat ratione dignissimos omnis iure.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae, minus deleniti libero impedit modi
+            aspernatur ex. Necessitatibus esse quia obcaecati in doloremque! Ea, laborum maiores aliquid consectetur
+            dolorem quibusdam.</p>
         </article>
       </section>
     </div>
@@ -26,9 +32,15 @@
       </section>
       <section class="text">
         <article class="main-article">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum non ad mollitia iure laudantium alias nostrum blanditiis omnis maxime numquam accusamus quo dolorem doloremque aut voluptates, dolorum. Minima, culpa.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias molestiae nesciunt consequuntur aspernatur! A sequi dolores praesentium, inventore, officiis reiciendis quasi, fugit consectetur facere, placeat ratione dignissimos omnis iure.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae, minus deleniti libero impedit modi aspernatur ex. Necessitatibus esse quia obcaecati in doloremque! Ea, laborum maiores aliquid consectetur dolorem quibusdam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum non ad mollitia iure laudantium alias
+            nostrum blanditiis omnis maxime numquam accusamus quo dolorem doloremque aut voluptates, dolorum. Minima,
+            culpa.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias molestiae nesciunt consequuntur
+            aspernatur! A sequi dolores praesentium, inventore, officiis reiciendis quasi, fugit consectetur facere,
+            placeat ratione dignissimos omnis iure.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae, minus deleniti libero impedit modi
+            aspernatur ex. Necessitatibus esse quia obcaecati in doloremque! Ea, laborum maiores aliquid consectetur
+            dolorem quibusdam.</p>
         </article>
       </section>
     </div>
@@ -52,6 +64,7 @@ export default {
   background-position: 50% 50%;
   z-index: 1;
 }
+
 .news2 {
   height: 350px;
   background-image: url('https://itc.ua/wp-content/uploads/2021/02/s21-vs-ultra-1-of-1.jpg');
@@ -60,6 +73,7 @@ export default {
   background-position: 50% 50%;
   z-index: 1;
 }
+
 /* SECTION PHOTO */
 
 
@@ -68,17 +82,20 @@ export default {
   margin: 100px auto 100px auto;
   box-shadow: 0 8px 20px -6px #000;
 }
-.text-photo{
+
+.text-photo {
   z-index: 2;
   position: relative;
   left: 5%;
   top: 50%;
 }
+
 .author {
   letter-spacing: 1px;
   font-weight: 400;
   text-transform: uppercase;
 }
+
 .headline {
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -87,6 +104,7 @@ export default {
   font-size: 2.5em;
   margin-right: 20%;
 }
+
 .topic_btn {
   margin-top: 10px;
   font-weight: 800;
@@ -98,6 +116,7 @@ export default {
   outline: none;
   border: 0;
 }
+
 /* SECTION TEXT */
 .text {
   padding: 40px 5% 10px 5%;
@@ -105,14 +124,17 @@ export default {
   color: #95A5A6;
   background-color: #F2F1EF;
 }
+
 .main-article {
   font-size: 1em;
   text-align: left;
   line-height: 1.5em;
 }
+
 .main-article p {
   margin-bottom: 15px;
 }
+
 .main-article p:first-child:first-letter {
   float: left;
   color: #4a545e;
@@ -122,26 +144,30 @@ export default {
   padding-right: 8px;
   padding-left: 3px;
 }
+
 /* SECTION COMMENTS */
-.comments{
+.comments {
   padding: 30px 5% 10px 5%;
   color: #000;
   background-color: #fff;
 }
+
 .comments h3 {
   text-transform: uppercase;
   text-align: center;
   font-size: 1em;
   margin-bottom: 30px;
 }
-li{
+
+li {
   font-size: 0.8em;
   list-style: none;
   margin-bottom: 30px;
 }
+
 @media (max-width: 768px) {
- .card-container{
-   width: 80%;
- }
+  .card-container {
+    width: 80%;
   }
+}
 </style>

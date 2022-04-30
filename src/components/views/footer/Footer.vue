@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p><span>&#169;</span> {{new Date().getFullYear()}} All rights reserved.</p>
+    <p><span>&#169;</span> {{ new Date().getFullYear() }} All rights reserved.</p>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-.footer{
+.footer {
   width: 100%;
   height: 25px;
   background-color: black;

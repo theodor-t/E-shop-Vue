@@ -214,9 +214,11 @@ export default {
   border-radius: 4px;
   resize: vertical;
 }
-#check__out__close{
+
+#check__out__close {
   cursor: pointer;
 }
+
 .input_width {
   width: 90%;
   padding: 18px;

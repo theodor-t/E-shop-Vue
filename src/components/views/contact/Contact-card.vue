@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 
-.container{
+.container {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
@@ -64,7 +64,7 @@ export default {
   padding: 1em;
 }
 
-ul{
+ul {
   list-style: none;
   padding: 0;
 }
@@ -76,84 +76,89 @@ ul{
   color: black;
   font-weight: lighter;
 }
+
 .hr_line {
   width: 35%;
   margin: 0 auto;
 }
 
-.brand span{
+.brand span {
   color: #fff;
 }
 
-.wrapper{
-  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
   margin-top: 15px;
 }
-.wrapper > *{
+
+.wrapper > * {
   padding: 1em;
 }
-.company-info{
+
+.company-info {
   background: #c9e6ff;
 }
 
-.company-info h3, .company-info ul{
+.company-info h3, .company-info ul {
   text-align: center;
   margin: 0 0 1rem 0;
 }
-.contact{
+
+.contact {
   background: #f9feff;
 }
 
 /*Form styles*/
-.contact form{
+.contact form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.contact form label{
+.contact form label {
   display: block;
 }
 
-.contact form p{
+.contact form p {
   margin: 0;
 }
 
-.contact form .full{
-  grid-column: 1 / 3 ;
+.contact form .full {
+  grid-column: 1 / 3;
 }
 
-.contact form button , .contact form input, .contact form textarea{
+.contact form button, .contact form input, .contact form textarea {
   width: 100%;
   padding: 1em;
   border: 1px solid #c9e6ff;
 }
-.contact form button{
+
+.contact form button {
   background: #c9e6ff;
   border: 0;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-.contact form button:hover, .contact form button:focus{
+.contact form button:hover, .contact form button:focus {
   background: #92bde7;
   color: #fff;
   outline: 0;
-  transition: background-color 1s ease-out ;
+  transition: background-color 1s ease-out;
 }
 
 /*Pantallas Grandes*/
-@media(min-width:700px){
-  .wrapper{
+@media (min-width: 700px) {
+  .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  .wrapper > *{
+  .wrapper > * {
     padding: 2em;
   }
 
-  .company-info h3, .company-info ul{
+  .company-info h3, .company-info ul {
     text-align: left;
   }
 }

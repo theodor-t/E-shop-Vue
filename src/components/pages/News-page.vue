@@ -8,10 +8,11 @@
 <script>
 import Header from "@/components/views/header/Header";
 import NewsCard from "../views/news/News-card";
+
 export default {
   name: "NewsPage",
-  components:{
-    Header,NewsCard
+  components: {
+    Header, NewsCard
   }
 }
 </script>
