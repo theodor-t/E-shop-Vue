@@ -3,44 +3,46 @@
     <div class="card-container">
       <section class="news1">
         <div class="text-photo">
-          <p class="author">STEVE JOBS</p>
-          <p class="headline">IPHONE 13 PRO MAX</p>
-          <button class="topic_btn">Apple</button>
+          <!--          <button class="topic_btn">15.02.2022</button>-->
         </div>
       </section>
       <section class="text">
         <article class="main-article">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum non ad mollitia iure laudantium alias
-            nostrum blanditiis omnis maxime numquam accusamus quo dolorem doloremque aut voluptates, dolorum. Minima,
-            culpa.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias molestiae nesciunt consequuntur
-            aspernatur! A sequi dolores praesentium, inventore, officiis reiciendis quasi, fugit consectetur facere,
-            placeat ratione dignissimos omnis iure.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae, minus deleniti libero impedit modi
-            aspernatur ex. Necessitatibus esse quia obcaecati in doloremque! Ea, laborum maiores aliquid consectetur
-            dolorem quibusdam.</p>
+          <p>UNLOCK DISCOUNTS ON BLACK FRIDAY!</p>
+          <p>Can you already feel the heat for BLACK FRIDAY?
+            Every year more and more people choose to wait until this momentous discount period to buy the coolest
+            products at the best prices. This year, four days of discounts up to 500 LEI and an impressive list of
+            products that are worthy of your attention are waiting for you.
+            We offer you to take advantage of super-profitable discounts on top tablets, smartphones, gadgets, TVs,
+            peripherals and more! You will have not one, but exactly four days at your disposal! Become a part of BLACK
+            FRIDAY with AntiHype! Take your Promo Code, but remember that they are limited. Good Luck!</p>
+          <p>Promo-codes: <br>
+            Gw29Ulq07 <br>
+            EtOo902p1 <br>
+            UT78ba281 <br>
+            762oWy671</p>
         </article>
       </section>
     </div>
     <div class="card-container">
       <section class="news2">
         <div class="text-photo">
-          <p class="author">Peter Kelly</p>
+<!--          <p class="author">Peter Kelly</p>
           <p class="headline">Samsung S21 Ultra</p>
-          <button class="topic_btn">Samsung</button>
+          <button class="topic_btn">Samsung</button>-->
         </div>
       </section>
       <section class="text">
         <article class="main-article">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum non ad mollitia iure laudantium alias
-            nostrum blanditiis omnis maxime numquam accusamus quo dolorem doloremque aut voluptates, dolorum. Minima,
-            culpa.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias molestiae nesciunt consequuntur
-            aspernatur! A sequi dolores praesentium, inventore, officiis reiciendis quasi, fugit consectetur facere,
-            placeat ratione dignissimos omnis iure.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In recusandae, minus deleniti libero impedit modi
-            aspernatur ex. Necessitatibus esse quia obcaecati in doloremque! Ea, laborum maiores aliquid consectetur
-            dolorem quibusdam.</p>
+          <p>
+            The Easter Holiday brings you SUPER DISCOUNTS on gadgets!
+            This time in basket of presents, in addition to chocolate eggs and Easter cakes, you will find laptops,
+            smart watches, fitness bracelets, smartphones, wireless headphones, speakers and many other smart devices
+            and gadgets.
+            Catch the Promo Code and get SUPER DISCOUNTS on gadgets at AntiHype store! Take advantage of the Easter
+            promotion and please your family and friends with cool gifts and positive emotions!
+            The AntiHype team wishes you a Happy Easter full of light and warmth! Be safe!
+          </p>
         </article>
       </section>
     </div>
@@ -58,7 +60,7 @@ export default {
 /* SECTION PHOTO */
 .news1 {
   height: 350px;
-  background-image: url('https://rozetked.me/images/uploads/webp/MhMVc9UY4DDb.webp');
+  background-image: url('../../../static/img/news/news1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -67,7 +69,7 @@ export default {
 
 .news2 {
   height: 350px;
-  background-image: url('https://itc.ua/wp-content/uploads/2021/02/s21-vs-ultra-1-of-1.jpg');
+  background-image: url('../../../static/img/news/news2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
