@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <h1 class="brand">Contact Us</h1>
+    <h1 class="heading_text">Contact Us</h1>
+    <hr class="hr_line">
     <div class="wrapper">
       <div class="company-info">
         <h3>Contacts</h3>
@@ -68,15 +69,25 @@ ul{
   padding: 0;
 }
 
-.brand{
+.heading_text {
+  margin-top: 20px;
   text-align: center;
+  font-size: 40px;
+  color: black;
+  font-weight: lighter;
 }
+.hr_line {
+  width: 35%;
+  margin: 0 auto;
+}
+
 .brand span{
   color: #fff;
 }
 
 .wrapper{
   box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+  margin-top: 15px;
 }
 .wrapper > *{
   padding: 1em;

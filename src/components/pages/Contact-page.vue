@@ -9,6 +9,7 @@
 import Header from "@/components/views/header/Header";
 import ContactCard from "@/components/views/contact/Contact-card";
 
+
 export default {
   name: "ContactPage",
   components:{

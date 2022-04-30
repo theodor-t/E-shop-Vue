@@ -88,14 +88,19 @@
         </figcaption>
       </figure>
     </div>
+  <Footer/>
   </section>
 
 
 </template>
 
 <script>
+import Footer from "@/components/views/footer/Footer";
 export default {
-  name: "About"
+  name: "About",
+  components: {
+    Footer
+  }
 }
 </script>
 

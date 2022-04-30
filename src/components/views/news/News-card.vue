@@ -139,5 +139,9 @@ li{
   list-style: none;
   margin-bottom: 30px;
 }
-
+@media (max-width: 768px) {
+ .card-container{
+   width: 80%;
+ }
+  }
 </style>

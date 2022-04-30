@@ -145,13 +145,13 @@
 
     @media (max-width: 880px) {
       .select-box {
-        margin-left: 330px;
+        margin-left: 250px;
       }
     }
 
     @media (max-width: 670px) {
       .select-box {
-        margin-left: 185px;
+        margin-left: 150px;
       }
     }
 
