@@ -55,33 +55,32 @@
     </div>
     <div class="container">
       <figure class="snip1574">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample40.jpg" alt="profile-sample2"/>
+        <img src="../../../static/img/reviews/review1.png"/>
         <figcaption>
           <blockquote>
-            <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+            <p>My new Iphone 12 Pro Max was in delay, so I wrote to the support team, they explained everything and
+              helped me</p>
           </blockquote>
-          <h3>Sue Shei</h3>
-          <h5>Founder</h5>
+          <h3>Anna Nicklson</h3>
         </figcaption>
       </figure>
-      <figure class="snip1574"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample37.jpg"
-                                    alt="profile-sample7"/>
+      <figure class="snip1574"><img src="../../../static/img/reviews/review2.png"/>
         <figcaption>
           <blockquote>
-            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+            <p>They give you free promo codes. Me and my homie got some. Super dope!</p>
           </blockquote>
-          <h3>Will Barrow</h3>
-          <h5>Web Designer</h5>
+          <br>
+          <br>
+          <h3>David</h3>
         </figcaption>
       </figure>
-      <figure class="snip1574"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample35.jpg"
-                                    alt="profile-sample6"/>
+      <figure class="snip1574"><img src="../../../static/img/reviews/review3.png"/>
         <figcaption>
           <blockquote>
-            <p>The only skills I have the patience to learn are those that have no real application in life. </p>
+            <p>I bought a laptop here last week and it has already arrived! It’s super fast </p>
           </blockquote>
-          <h3>Indigo Violet</h3>
-          <h5>Public Relations</h5>
+          <br>
+          <h3>Mike Johnson </h3>
         </figcaption>
       </figure>
     </div>
