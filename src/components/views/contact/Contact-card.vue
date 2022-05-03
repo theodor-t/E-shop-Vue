@@ -16,15 +16,15 @@
         <form ref="form" @submit.prevent="sendEmail">
           <p>
             <label>Full Name</label>
-            <input type="text" name="user_name">
+            <input type="text" name="user_name" required>
           </p>
           <p>
             <label>Email</label>
-            <input type="email" name="user_email">
+            <input type="email" name="user_email" required>
           </p>
           <p class="full">
             <label for="message" id="message">Message</label>
-            <textarea name="message" id="" rows="5"></textarea>
+            <textarea name="message" id="" rows="5" required></textarea>
           </p>
           <p class="full">
             <button type="submit" value="Send">Send</button>
@@ -45,9 +45,26 @@ export default {
     sendEmail() {
       emailjs.sendForm('service_rhz9a7w', 'template_gobnvmj', this.$refs.form, 'bSCooxdPK1JoDb3WY')
           .then((result) => {
-            alert('SUCCESS!', result.text);
+            this.$fire({
+              title: "Successfully!",
+              text: "\n" +
+                  "Your message has been sent successfully, expect a response within 5 business days.",
+              type: "success",
+              timer: 3000
+            }).then(r => {
+              console.log(r.value);
+              console.log(result.text)
+            });
           }, (error) => {
-            alert('FAILED...', error.text);
+            this.$fire({
+              title: "Error!",
+              text: "Check the data is correct and try again.",
+              type: "error",
+              timer: 3000
+            }).then(r => {
+              console.log(r.value);
+              console.log(error.text)
+            });
           });
     }
   }

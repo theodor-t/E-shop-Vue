@@ -51,8 +51,19 @@ export default {
       if (this.category !== 'iphone')
         this.$emit('addToCart', this.cartItem);
 
-      if (this.cartItem.colors && this.cartItem.memoryCapacity)
+
+      if (this.cartItem.colors && this.cartItem.memoryCapacity) {
         this.$emit('addToCart', this.cartItem);
+        this.$fire({
+          title: "Successfully!",
+          text: "Added to cart.",
+          type: "success",
+          timer: 3000
+        }).then(r => {
+          console.log(r.value);
+        });
+      }
+
 
     },
     selectSize(event, index) {

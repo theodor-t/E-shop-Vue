@@ -7,9 +7,11 @@ import router from './router/index'
 import VueRouter from "vue-router";
 import store from "@/store/store";
 import Cart from "@/shopping-cart-components/Cart";
+import VueSimpleAlert from "vue-simple-alert";
 
 
 Vue.use(VueRouter);
+Vue.use(VueSimpleAlert);
 Vue.use(BootstrapVue)
 Vue.prototype.$cart = new Cart();
 

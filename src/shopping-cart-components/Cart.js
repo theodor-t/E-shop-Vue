@@ -16,13 +16,12 @@ export default class Cart {
             countArray.push(element.memoryCapacity.find(product => product.size === size).quantity);
 
         if (element.memoryCapacity.length === 0 && element.colors.length === 0) return element.quantity;
-        console.log("pula lu vitalik ii mititica");
         return Math.min(...countArray.filter(elem => elem !== null));
+
     }
 
     inCart(cart, product) {
         if (cart === []) return false;
-
         return cart.find(element => this.searchPredicate(element, product));
     }
 

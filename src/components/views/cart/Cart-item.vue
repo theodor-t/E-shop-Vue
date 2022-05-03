@@ -63,6 +63,14 @@ export default {
     removeItem() {
       this.REMOVE_CART_PRODUCT(this.item_data);
       this.CALCULATE_TOTAL_COUNT(this.$cart.calculateTotal(this.CART));
+      this.$fire({
+        title: "Successfully!",
+        text: "Product has been deleted.",
+        type: "success",
+        timer: 3000
+      }).then(r => {
+        console.log(r.value);
+      });
     }
   },
   mounted() {
