@@ -65,10 +65,29 @@ export default {
 
       await this.GET_DISCOUNT(this.discountCode);
       this.discountCode = (this.DISCOUNT ? this.DISCOUNT.value : 0);
-      if (!this.DISCOUNT) this.discountCode = '';
+      if (!this.DISCOUNT) {
+        this.discountCode = '';
+        this.$fire({
+          title: "Error!",
+          text: "Promo code does not exist or has already been activated!",
+          type: "error",
+          timer: 3000
+        }).then(r => {
+          console.log(r.value);
+        });
+      }
 
       else {
         this.toggledDiscount = true;
+        this.$fire({
+          title: "Successfully!",
+          text: "\n" +
+              "Promo code has been successfully used!",
+          type: "success",
+          timer: 3000
+        }).then(r => {
+          console.log(r.value);
+        });
       }
       await this.deleteDiscount(this.DISCOUNT.code); // -> to remove on popup not now.
     },
